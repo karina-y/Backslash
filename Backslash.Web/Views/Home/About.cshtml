@@ -1,0 +1,136 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+@Styles.Render("~/Content/Styles/home-about.min.css")
+
+@*
+    - get rid of break tags
+    - why do i need the contact us controller, it doesn't do anything
+*@
+
+
+<div class="about-parallax-container">
+    <section class="parallax-top">
+        <div class="parallax-bg"></div>
+        <div class="md-box">
+            <img src="/Content/Images/profile/coco-rb_comic.png" class="left-coco">
+        </div>
+    </section>
+
+    <div class="dynamic-content-container" ng-controller="aboutController as ac">
+
+        <div class="content-container-level-1">
+            <div class="content-container-level-2">
+                <ul class="nav nav-tabs">
+                    <li ng-class="ac.tabClass(tab)" ng-repeat="tab in ac.tabs">
+                        <a href="{{tab.link}}" ng-click="ac.setSelectedTab(tab)">{{tab.label}}</a>
+                    </li>
+                </ul>
+                <div class="dynamic-content" ng-view></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    (function () {
+        "use strict";
+
+        angular.module(APPNAME)
+            .config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
+
+                $routeProvider.when('/', {
+                    templateUrl: '/Scripts/about/About.html',
+                    controller: 'infoController',
+                    controllerAs: 'ac'
+                })
+                .when('/contact', {
+                    templateUrl: '/Scripts/about/Contact.html',
+                    controller: 'contactController',
+                    controllerAs: 'cc'
+                });
+                $locationProvider.html5Mode(false);
+
+            }]);
+    })();
+
+
+
+    (function () {
+        "use strict";
+
+        angular.module(APPNAME)
+        .controller("aboutController", AboutController);
+
+        AboutController.$inject = ['$scope', '$baseController'];
+
+        function AboutController($scope, $baseController) {
+
+            var vm = this;
+            $baseController.merge(vm, $baseController);
+
+            vm.$scope = $scope;
+
+            vm.tabs = [
+            { link: '#/', label: 'About' },
+            { link: '#/contact', label: 'Contact' }
+            ];
+
+            vm.selectedTab = vm.tabs[0];
+            vm.tabClass = _tabClass;
+            vm.setSelectedTab = _setSelectedTab;
+
+            function _tabClass(tab) {
+                if (vm.selectedTab == tab) {
+                    return "active";
+                } else {
+                    return "";
+                }
+            }
+
+            function _setSelectedTab(tab) {
+                vm.selectedTab = tab;
+            }
+        }
+    })();
+
+
+
+    (function () {
+        "use strict";
+
+        angular.module(APPNAME)
+        .controller("infoController", InfoController);
+
+        InfoController.$inject = ['$scope', '$baseController'];
+
+        function InfoController($scope, $baseController) {
+            var vm = this;
+            $baseController.merge(vm, $baseController);
+            vm.$scope = $scope;
+        };
+    })();
+
+
+
+
+    (function () {
+        "use strict";
+
+        angular.module(APPNAME)
+        .controller("contactController", ContactController);
+
+        ContactController.$inject = ['$scope', '$baseController'];
+
+        function ContactController($scope, $baseController) {
+            var vm = this;
+            $baseController.merge(vm, $baseController);
+            vm.$scope = $scope;
+        };
+    })();
+
+
+</script>

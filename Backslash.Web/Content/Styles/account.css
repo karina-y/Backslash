@@ -1,0 +1,117 @@
+﻿@breakpoint-xs : only screen and (min-width: 480px);
+@breakpoint-sm : only screen and (min-width: 768px);
+@breakpoint-md : only screen and (min-width: 992px);
+@breakpoint-lg : only screen and (min-width: 1200px);
+div.account-parallax-container > .parallax-top {
+  overflow: hidden;
+  position: relative;
+}
+div.account-parallax-container > .parallax-top > .parallax-bg {
+  background-attachment: fixed;
+  background-image: url(/Content/Images/parallax-bg/modern-girl.jpg);
+  opacity: .2;
+  background-position: 0px 0px;
+  background-repeat: repeat;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+div.account-parallax-container > .parallax-top > .md-box {
+  padding: 50px 0 0px;
+  background: transparent;
+  position: relative;
+  height: 100%;
+  text-align: center;
+}
+div.account-parallax-container > .parallax-top > .md-box > img.left-coco {
+  float: left;
+  padding-left: 3%;
+  width: 90%;
+}
+@media only screen and (min-width: 768px) {
+  div.account-parallax-container > .parallax-top > .md-box > img.left-coco {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  div.account-parallax-container > .parallax-top > .md-box > img.left-coco {
+    width: 45%;
+  }
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-top: 1%;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 {
+  width: 80%;
+  margin: 0 auto;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > ul.nav-tabs {
+  width: 95%;
+  position: relative;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > ul.nav-tabs > li > a {
+  font-weight: bold;
+  color: #EC7C7D !important;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 {
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 > .content-container-level-4 {
+  width: 80%;
+  margin: 0 auto;
+  /*.login-input {
+                                    float: left;
+                                    width: 100%;
+                                }*/
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 > .content-container-level-4 .text-danger {
+  display: block;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 > .content-container-level-4 div.login-container {
+  width: 100%;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: relative;
+  display: inline-block;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 > .content-container-level-4 input[type="text"],
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 > .content-container-level-4 input[type="password"] {
+  width: 100%;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 > .contact-button-container {
+  width: 100%;
+  padding-top: 25px;
+  display: inline-block;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 > .contact-button-container > .button-container {
+  text-align: center;
+}
+div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 > .contact-button-container > .button-container > .contact-submit-btn {
+  margin: 5px;
+}
+@media only screen and (min-width: 480px) {
+  div.account-parallax-container > .dynamic-content-container > .content-container-level-1 > .content-container-level-2 > .dynamic-content > .full-content-section > .content-container-level-3 {
+    border-right: thick solid #EC7C7D;
+    border-left: thick solid #EC7C7D;
+    width: 95%;
+  }
+}

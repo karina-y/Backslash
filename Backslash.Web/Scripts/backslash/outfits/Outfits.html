@@ -1,0 +1,219 @@
+﻿<!--
+    - click on image, modal comes up to update it
+    - zoom on hover needs to put div on top instead of pushing divs out of the way
+    - edit angular models
+    - need better button names
+    - externalize into new page?
+    - remove break tags
+-->
+
+
+<section class="dynamic-content-section">
+
+    <div class="page-title"><p>My Outfits</p></div>
+    <div class="content-container-level-3">
+        <div class="search-input-container">
+            <form class="image-form" id="imageForm" name="oc.imageForm" role="form" validate>
+                <!--<div class="input-container-level-1">
+
+                    <input type="text"
+                           placeholder="manually search here"
+                           name="imageForm"
+                           id="imageForm"
+                           class="image-input"
+                           ng-model="oc.newImage.tags.manualInput"
+                           validate>
+                </div>-->
+
+                <div class="input-container-level-2">
+                    <select id="colors"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.colors"
+                            multiple>
+                        <option value="" disabled>Color</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:1}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="material"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.material"
+                            multiple>
+                        <option value="" disabled>Material</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:2}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="tops"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.tops"
+                            multiple>
+                        <option value="" disabled>Tops</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:3}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="bottoms"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.bottoms"
+                            multiple>
+                        <option value="" disabled>Bottoms</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:4}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="dresses"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.onePieces"
+                            multiple>
+                        <option value="" disabled>One Pieces</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:5}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="outerwear"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.outerwear"
+                            multiple>
+                        <option value="" disabled>Outerwear</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:6}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+                </div>
+
+                <div class="input-container-level-3">
+                    <select id="occasion"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.occasion"
+                            multiple>
+                        <option value="" disabled>Occasion</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:7}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="season"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.season"
+                            multiple>
+                        <option value="" disabled>Season</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:8}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="style"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.style"
+                            multiple>
+                        <option value="" disabled>Style</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:9}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="accessories"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.accessories"
+                            multiple>
+                        <option value="" disabled>Accessories</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:10}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="bags"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.bags"
+                            multiple>
+                        <option value="" disabled>Bags</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:11}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="ftwrHeight"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.ftwrHeight"
+                            multiple>
+                        <option value="" disabled>Footwear: Height</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:12}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+
+                    <select id="ftwrStyle"
+                            class="image-input"
+                            ng-model="oc.newImage.tags.ftwrStyle"
+                            multiple>
+                        <option value="" disabled>Footwear: Style</option>
+                        <option ng-repeat="tag in oc.tags | filter: {TagCategoryId:13}:true track by tag.TagId" ng-value="tag.TagId">{{tag.TagDisplayName}}</option>
+                    </select>
+                </div>
+
+                <div class="closet-button-container">
+                    <button type="submit" class="image-search-btn" ng-click="oc.getImageBySearch()" ng-hide="false">Search Outfits</button>
+                    <button type="submit" class="image-search-btn" ng-click="oc.buildOutfit()" ng-hide="false">Build Outfit</button>
+                    <button type="submit" class="image-upload-btn" ng-click="oc.addFile()">Add to Closet</button>
+                </div>
+            </form>
+            <hr style="width:95%" />
+        </div>
+
+        <div class="search-results-container">
+            <div class="col-sm-3 text-center image-hover-container closet-image-container" data-ng-repeat="img in oc.imageResults track by $index">
+                <a href="/profile/edit/{{img.FileId}}">
+
+                    <div class="result-image" style="background-image:url({{img.FilePath}});"></div>
+
+                </a>
+            </div>
+        </div>
+
+        <button style="display:none" type="button" class="btn btn-primary btn-lg" id="modalButtonTags" data-toggle="modal" data-target="#myTagModal"></button>
+    </div>
+</section>
+
+
+
+
+<script type="text/ng-template" id="outfitBuilderModalContent.html">
+
+    <!--@* modal-content set to transparent background, need to fix this according to a child class, but how *@-->
+
+    <div class="modal-header image-modal-header outfit-modal-header">
+        <button type="button" class="close" ng-click="omc.cancel()">
+            <span aria-hidden="true"><img src="/Content/Images/buttons/close-button-xonly.png" width="40" /></span>
+        </button>
+    </div>
+
+    <div class="modal-body outfit-builder-modal-body">
+
+        <div class="row">
+            <div class="col-sm-6">
+
+                <div class="container-fluid">
+                    <div class="row button-container">
+
+                        <div class="col-sm-6">
+                            <button class="med-font" ng-click="omc.saveOutfitImage()">save image</button>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <button class="med-font" ng-click="omc.bringFront()">bring front</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="canvas-wrapper">
+                                <canvas id="outfitCanvas" width="600" height="600" ng-init="omc.initCanvas()"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6">
+
+                <select ng-model="selectedImages" id="outfitImagePicker" multiple="multiple">
+                    <option ng-repeat="img in omc.imageResults track by $index"
+                            value="{{img.FilePath}}"
+                            data-img-class="image-picker-icon"
+                            data-img-src="{{img.FilePath}}">
+                        {{img.FileId}}
+                    </option>
+                </select>
+
+            </div>
+
+        </div>
+    </div>
+
+</script>

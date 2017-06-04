@@ -1,0 +1,234 @@
+﻿@import "./variables.less";
+
+div.about-parallax-container {
+    & > .parallax-top {
+        overflow: hidden;
+        position: relative;
+
+        & > .parallax-bg {
+            background-attachment: fixed;
+            background-image: url(/Content/Images/parallax-bg/smack.jpg);
+            opacity: .2;
+            background-position: 0px 0px;
+            background-repeat: repeat;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            /*-moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";*/
+        }
+
+        & > .md-box {
+            padding: 50px 0 0px;
+            background: transparent;
+            position: relative;
+            height: 100%;
+            text-align: center;
+
+            & > img.left-coco {
+                float: left;
+                padding-left: 3%;
+                width: 90%;
+
+                @media only screen and (min-width: 768px) {
+                    width: 70%;
+                }
+
+                @media only screen and (min-width: 992px) {
+                    width: 45%;
+                }
+            }
+        }
+    }
+
+    & > .dynamic-content-container {
+
+        & > .content-container-level-1 {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            padding-top: 1%;
+
+            & > .content-container-level-2 {
+                width: 80%;
+                margin: 0 auto;
+
+                & > ul.nav-tabs {
+                    width: 95%;
+                    position: relative;
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    -o-transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    left: 50%;
+
+                    & > li {
+                        & > a {
+                            font-weight: bold;
+                            color: @backslash-pink !important;
+                        }
+                    }
+                }
+
+                & > .dynamic-content {
+                    & > .full-content-section {
+                        & > .page-title {
+                            & > p {
+                            }
+                        }
+
+                        & > .content-container-level-3 {
+                            border: none;
+                            width: 100%;
+                            margin: 0 auto;
+                            text-align: center;
+
+
+                            & > .content-container-level-4 {
+                                width: 80%;
+                                margin: 0 auto;
+                            }
+
+                            & > .content-container-level-4.contact-container {
+                                width: 100%;
+
+                                & > .contact-left {
+                                    float: none;
+
+                                    & > .contact-input {
+                                        padding-bottom: 11px;
+                                        width: 100%;
+
+                                        & > input {
+                                            width: 100%;
+                                            padding: 1.5px;
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+
+                                & > .contact-right {
+                                    float: none;
+
+                                    & > textarea {
+                                        width: 100%;
+                                        height: 100px;
+                                    }
+                                }
+                            }
+
+                            & > .contact-button-container {
+                                width: 100%;
+                                padding-top: 25px;
+                                display: inline-block;
+
+                                & > .button-container {
+                                    text-align: center;
+
+                                    & > .contact-submit-btn {
+                                        margin: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 480px) {
+
+    div.about-parallax-container {
+        & > .parallax-top {
+
+            & > .parallax-bg {
+            }
+
+            & > .md-box {
+
+                & > img.left-coco {
+                }
+            }
+        }
+
+        & > .dynamic-content-container {
+
+            & > .content-container-level-1 {
+
+                & > .content-container-level-2 {
+
+                    & > ul.nav-tabs {
+
+                        & > li {
+                            & > a {
+                            }
+                        }
+                    }
+
+                    & > .dynamic-content {
+                        & > .full-content-section {
+                            & > .page-title {
+                                & > p {
+                                }
+                            }
+
+                            & > .content-container-level-3 {
+                                border-right: thick solid @backslash-pink;
+                                border-left: thick solid @backslash-pink;
+                                width: 95%;
+
+                                & > .content-container-level-4 {
+                                }
+
+                                & > .content-container-level-4.contact-container {
+                                    width: 55%;
+
+
+                                    & > .contact-left {
+                                        float: left;
+
+                                        & > .contact-input {
+                                            width: unset;
+
+                                            & > input {
+                                                width: 350px;
+                                            }
+                                        }
+                                    }
+
+                                    & > .contact-right {
+                                        float: right;
+
+                                        & > textarea {
+                                            width: 350px;
+                                        }
+                                    }
+                                }
+
+                                & > .contact-button-container {
+
+                                    & > .button-container {
+                                        & > .contact-submit-btn {
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

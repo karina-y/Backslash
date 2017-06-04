@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Styles/account.min.css")
+
+    @RenderSection("styles", required: false)
+
+    <link rel="icon" type="image/png" href="~/Content/Images/home/favicon.png" />
+
+    <script type="text/javascript">
+        var APPNAME = 'BackslashApp';
+    </script>
+
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/backslash")
+
+    @RenderSection("scripts", required: false)
+
+</head>
+
+
+<body data-ng-app="BackslashApp" ng-cloak>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+        </div>
+    </div>
+
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/">
+                    <img src="/Content/Images/navbar/logo_pink.png" class="backslash-logo">
+                </a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <ul class="nav navbar-nav navbar-right"></ul>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+                <ul class="nav navbar-nav navbar-right backslash-navbar">
+
+                    <li class="active">
+                        <a href="/home/about">
+                            <div class="button-icon-container">
+                                <img src="/Content/Images/navbar/about_comic.png" />
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/profile/home">
+                            <div class="button-icon-container">
+                                <img src="/Content/Images/navbar/home_comic.png" />
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/search/inspiration">
+                            <div class="button-icon-container">
+                                <img src="/Content/Images/navbar/search_comic.png" />
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <div class="dropdown">
+                            <img src="/Content/Images/navbar/account_comic.png" />
+                            <div class="dropdown-content">
+                                @Html.Partial("_LoginPartial")
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="rendered-body">
+        @RenderBody()
+    </div>
+
+
+    <footer>
+        <hr />
+        <div class="social-links">
+            <a href="http://github.com/karina-y" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+            <a href="http://linkedin.com/in/karinayeznaian" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
+        </div>
+        <br />
+        <p class="text-center">This application is purely for demo purposes. All art belongs to original owners.</p>
+    </footer>
+
+</body>
+</html>

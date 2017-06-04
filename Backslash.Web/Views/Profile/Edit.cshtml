@@ -1,0 +1,190 @@
+﻿@model Backslash.Web.Models.ViewModels.ProfileEditViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@Styles.Render("~/Content/Styles/profile-home.min.css")
+
+
+<div class="profile-home">
+    <section class="parallax-top">
+        <div class="parallax-bg"></div>
+        <div class="md-box">
+            <img src="/Content/Images/profile/coco-rb_comic.png" class="left-coco">
+        </div>
+    </section>
+
+    <div class="content-container-level-1" ng-controller="editImageController as ec">
+        <div class="content-container-level-2">
+            <section class="full-content-section dynamic-content-container">
+                <div class="dynamic-content-section">
+                    <div class="page-title"><p>My Closet</p></div>
+
+                    <div class="content-container-level-3">
+                        <div class="search-input-container">
+
+                            <form id="imageForm" name="imageForm" role="form" validate>
+                                <div class="input-container-level-1">
+                                    <input type="text"
+                                           placeholder="name your outfit"
+                                           name="imageForm"
+                                           id="imageForm"
+                                           class="image-input"
+                                           ng-model="ec.currentImage.fileName"
+                                           validate>
+                                </div>
+
+                                <div class="input-container-level-2">
+                                    <select id="colors"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.colors"
+                                            multiple>
+                                        <option value="" disabled>Color</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:1}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="material"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.material"
+                                            multiple>
+                                        <option value="" disabled>Material</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:2}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="tops"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.tops"
+                                            multiple>
+                                        <option value="" disabled>Tops</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:3}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="bottoms"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.bottoms"
+                                            multiple>
+                                        <option value="" disabled>Bottoms</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:4}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="dresses"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.onePieces"
+                                            multiple>
+                                        <option value="" disabled>One Pieces</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:5}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="outerwear"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.outerwear"
+                                            multiple>
+                                        <option value="" disabled>Outerwear</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:6}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-container-level-3">
+                                    <select id="occasion"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.occasion"
+                                            multiple>
+                                        <option value="" disabled>Occasion</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:7}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="season"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.season"
+                                            multiple>
+                                        <option value="" disabled>Season</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:8}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="style"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.style"
+                                            multiple>
+                                        <option value="" disabled>Style</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:9}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="accessories"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.accessories"
+                                            multiple>
+                                        <option value="" disabled>Accessories</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:10}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="bags"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.bags"
+                                            multiple>
+                                        <option value="" disabled>Bags</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:11}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="ftwrHeight"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.ftwrHeight"
+                                            multiple>
+                                        <option value="" disabled>Footwear: Height</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:12}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+
+                                    <select id="ftwrStyle"
+                                            class="image-input"
+                                            ng-model="ec.currentImage.tags.ftwrStyle"
+                                            multiple>
+                                        <option value="" disabled>Footwear: Style</option>
+                                        <option ng-repeat="tag in ec.tags | filter: {TagCategoryId:13}:true track by tag.TagId" value="{{tag.TagId}}" ng-selected="{{tag.Selected}}">{{tag.TagDisplayName}}</option>
+                                    </select>
+                                </div>
+
+                                <div class="closet-button-container">
+                                    <button type="submit" id="cmdEditForm" class="image-edit-btn" ng-click="ec.updateImageData()">Update</button>
+                                    <button type="button" id="cmdDeleteForm" class="image-delete-btn" ng-click="ec.deleteSingleImage()">Delete</button>
+                                </div>
+                            </form>
+                            <hr style="width:95%" />
+                        </div>
+
+
+
+                        <div class="search-results-container">
+                            <div class="text-center image-hover-container closet-image-container">
+
+                                <img src="@Model.file.FilePath" class="result-image center-block img-responsive" />
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    fileId = '@Model.file.FileId';
+    fileName = '@Model.file.FileName';
+</script>
+
+
+<script src="~/Scripts/services/backslash.closet.services.js"></script>
+<script src="~/Scripts/backslash/edit/services.edit.js"></script>
+<script src="~/Scripts/backslash/edit/editController.js"></script>
+
+<script type="text/ng-template" id="modalContent.html">
+
+    <div class="modal-body error-modal-image">
+        <button type="button" class="close" ng-click="mc.cancel()" style="margin-bottom:-45px"><span aria-hidden="true"><img src="/Content/Images/buttons/close-button-xonly.png" width="40" /></span></button>
+
+        <img ng-src="/Content/Images/error/{{mc.modalMsg}}" class="img-responsive" />
+    </div>
+
+</script>

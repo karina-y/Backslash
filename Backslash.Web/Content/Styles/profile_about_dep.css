@@ -1,0 +1,153 @@
+﻿.block-parallax-1 {
+    overflow: hidden;
+    position: relative;
+}
+
+    .block-parallax-1 .parallax-bg {
+        background-attachment: fixed;
+        background-image: url('/Content/Images/home/white_marble-1.png');
+        background-position: 0px 0px;
+        background-repeat: repeat;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+    .block-parallax-1 .md-box {
+        padding: 50px 0 0px;
+        background: transparent;
+        position: relative;
+        height: 100%;
+        text-align: center;
+    }
+
+        .block-parallax-1 .md-box h1 {
+            color: black;
+        }
+
+.left-coco {
+    max-height: 500px;
+    height: auto;
+    max-width: 90%;
+    float: left;
+    padding-left: 3%;
+    position: relative;
+    display: inline-block;
+}
+
+.right-coco {
+    max-height: 500px;
+    height: auto;
+    max-width: 90%;
+    float: right;
+    padding-right: 3%;
+    position: relative;
+    display: inline-block;
+}
+
+.left-audrey {
+    max-height: 500px;
+    height: auto;
+    max-width: 90%;
+    float: left;
+    padding-left: 3%;
+    position: relative;
+    display: inline-block;
+}
+
+.search-input-container {
+    margin-bottom: 60px;
+}
+
+.search-results-container {
+    /*border-style: solid;
+    border-width: 1px;
+    border-color: #EC7C7D;*/
+    width: 95%;
+    transform: translateX(-50%);
+    left: 50%;
+    display: inline-block;
+    position: relative;
+    /* text-align: center; */
+}
+
+.closet-image-container {
+    padding: 2%;
+}
+
+h2 {
+    color: #555;
+    text-align: center;
+    padding: 25px 0;
+    margin: 0;
+}
+
+.closet-container-level-2 {
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    display: inline-block;
+}
+
+.contact-input {
+    padding-bottom: 4%;
+}
+
+    .contact-input > input {
+        width: 350px;
+    }
+
+.contact-textarea > textarea {
+    width: 350px;
+    height: 100px;
+}
+
+.contact-left-input {
+    max-width: 350px;
+    margin: 0 auto;
+    float: left;
+}
+
+.contact-right-input {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.contact-button-container {
+}
+
+.closet-button-container {
+}
+
+    .closet-button-container > button {
+        margin: 5px;
+    }
+
+
+
+
+
+
+@media only screen and (max-width: 400px) {
+    .closet-image-container {
+        display: block !important;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 900px) {
+    .closet-image-container {
+        width: 50%;
+    }
+
+    .search-input-container {
+        width: 80%;
+        display: inline-block;
+    }
+}

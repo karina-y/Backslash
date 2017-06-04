@@ -1,0 +1,52 @@
+﻿html, body {
+    max-width: 110%;
+    overflow-x: hidden;
+}
+
+.backslash-logo {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding-top: 10px;
+}
+
+
+@media only screen and (max-width: 370px) {
+    .backslash-logo {
+        display: inline-block;
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+
+.button-icon-container {
+    height: 50px;
+    width: 120px;
+    overflow: hidden;
+}
+
+
+    .button-icon-container img {
+        -moz-transform: translate3d(0px, 0px, 0px);
+        -ms-transform: translate3d(0px, 0px, 0px);
+        -o-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        transform: translate3d(0px, 0px, 0px);
+        -moz-transition: transform .3s ease-in-out;
+        -o-transition: transform .3s ease-in-out;
+        -webkit-transition: transform .3s ease-in-out;
+        transition: transform .3s ease-in-out;
+    }
+
+        .button-icon-container img:hover {
+            -moz-transform: translate3d(0px, -50px, 0px);
+            -ms-transform: translate3d(0px, -50px, 0px);
+            -o-transform: translate3d(0px, -50px, 0px);
+            -webkit-transform: translate3d(0px, -50px, 0px);
+            transform: translate3d(0px, -50px, 0px);
+        }
+
+.backslash-navbar > li {
+    padding: 10px;
+}

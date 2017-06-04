@@ -1,0 +1,113 @@
+﻿@breakpoint-xs : only screen and (min-width: 480px);
+@breakpoint-sm : only screen and (min-width: 768px);
+@breakpoint-md : only screen and (min-width: 992px);
+@breakpoint-lg : only screen and (min-width: 1200px);
+div.inspiration-container {
+  width: 100%;
+}
+div.inspiration-container > .parallax-top {
+  overflow: hidden;
+  position: relative;
+}
+div.inspiration-container > .parallax-top > .parallax-bg {
+  background-attachment: fixed;
+  background-image: url('/Content/Images/parallax-bg/modern-girl.jpg');
+  opacity: .2;
+  background-position: 0px 0px;
+  background-repeat: repeat;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+div.inspiration-container > .parallax-top > .md-box {
+  padding: 50px 0 0px;
+  background: transparent;
+  position: relative;
+}
+div.inspiration-container > .parallax-top > .md-box > img.right-anna {
+  float: right;
+  padding-left: 3%;
+  width: 90%;
+}
+@media only screen and (min-width: 768px) {
+  div.inspiration-container > .parallax-top > .md-box > img.right-anna {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  div.inspiration-container > .parallax-top > .md-box > img.right-anna {
+    width: 45%;
+  }
+}
+div.inspiration-container > .content-container-level-1 {
+  width: 100%;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 {
+  width: 80%;
+  margin: 0 auto;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section {
+  text-align: center;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+}
+@media only screen and (min-width: 480px) {
+  div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 {
+    width: 95%;
+    border-right: thick solid #EC7C7D;
+    border-left: thick solid #EC7C7D;
+  }
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 > .search-input-container {
+  margin-bottom: 60px;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 > .search-input-container > .search-form select {
+  padding: 9px;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 > .search-input-container > .search-form > .input-container-level-1 {
+  padding-bottom: 15px;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 > .search-input-container > .search-form > .input-container-level-1 > input {
+  width: 50%;
+  height: 35px;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 > .search-input-container > .search-form > .input-container-level-2 {
+  padding-bottom: 15px;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 > .search-input-container > .search-form > .input-container-level-3 {
+  padding-bottom: 15px;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 > .search-results-container {
+  width: 100%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+  display: inline-block;
+  position: relative;
+}
+div.inspiration-container > .content-container-level-1 > .content-container-level-2 > .full-content-section > .content-container-level-3 > .search-results-container > .image-container > img.center-cropped {
+  height: 300px;
+  margin-bottom: 40px;
+  -webkit-clip-path: polygon(0px 0px, 270px -100px, 270px 300px, -40px 300px, -40px -2px);
+  clip-path: polygon(0px 0px, 270px -100px, 270px 300px, -40px 300px, -40px -2px);
+}
+/*@media only screen and (max-width: 900px) {
+    .closet-image-container {
+        width: 50%;
+    }
+
+    .search-input-container {
+        width: 80%;
+        display: inline-block;
+    }
+}*/

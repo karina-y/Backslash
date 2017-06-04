@@ -1,0 +1,167 @@
+﻿<section class="dynamic-content-section">
+
+    <div class="page-title"><p>My Closet</p></div>
+    <div class="content-container-level-3 container">
+        <div class="search-input-container">
+            <form class="image-form" id="imageForm" name="cc.imageForm" role="form" validate>
+                <div class="input-container-level-1 row" style="margin-bottom:10px;">
+                    <!--<input type="file"
+                           placeholder="upload apparel here!"
+                           id="file"
+                           class="image-input"
+                           ng-model="cc.newImage.filePath">-->
+                    <div class="col-sm-12">
+                        <button ng-click="cc.openCropModal()">upload image</button>
+                    </div>
+
+
+                    <!--<input type="text"
+                           placeholder="manually search here"
+                           name="imageForm"
+                           id="imageForm"
+                           class="image-input"
+                           ng-model="cc.newImage.tags.manualInput"
+                           validate>-->
+                </div>
+
+                <div class="input-container-level-2 row">
+                    <div class="col-sm-12">
+                        <select id="colors"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.colors"
+                                multiple>
+                            <option value="" disabled>Color</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:1}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="material"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.material"
+                                multiple>
+                            <option value="" disabled>Material</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:2}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="tops"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.tops"
+                                multiple>
+                            <option value="" disabled>Tops</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:3}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="bottoms"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.bottoms"
+                                multiple>
+                            <option value="" disabled>Bottoms</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:4}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="dresses"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.onePieces"
+                                multiple>
+                            <option value="" disabled>One Pieces</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:5}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="outerwear"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.outerwear"
+                                multiple>
+                            <option value="" disabled>Outerwear</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:6}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-container-level-3 row">
+                    <div class="col-sm-12">
+                        <select id="occasion"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.occasion"
+                                multiple>
+                            <option value="" disabled>Occasion</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:7}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="season"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.season"
+                                multiple>
+                            <option value="" disabled>Season</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:8}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="style"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.style"
+                                multiple>
+                            <option value="" disabled>Style</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:9}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="accessories"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.accessories"
+                                multiple>
+                            <option value="" disabled>Accessories</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:10}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="bags"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.bags"
+                                multiple>
+                            <option value="" disabled>Bags</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:11}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="ftwrHeight"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.ftwrHeight"
+                                multiple>
+                            <option value="" disabled>Footwear: Height</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:12}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+
+                        <select id="ftwrStyle"
+                                class="image-input"
+                                ng-model="cc.newImage.tags.ftwrStyle"
+                                multiple>
+                            <option value="" disabled>Footwear: Style</option>
+                            <option ng-repeat="tag in cc.tags | filter: {TagCategoryId:13}:true track by tag.TagId" value="{{tag.TagId}}">{{tag.TagDisplayName}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--<div class="closet-button-container">
+                    <button type="submit" class="image-search-btn" ng-click="" ng-hide="false">Search Outfits</button>
+                </div>-->
+
+
+
+                <div class="closet-button-container row" style="margin-top:10px;">
+                    <div class="col-sm-12">
+                        <button type="submit" id="cmdUploadForm" class="image-upload-btn" ng-click="cc.addFile()">Add to Closet</button>
+                        <button type="submit" id="cmdSearchForm" class="image-search-btn" ng-click="cc.getImageBySearch()" ng-hide="false">Search Closet</button>
+                    </div>
+                </div>
+
+            </form>
+            <hr style="width:95%" />
+        </div>
+
+        <div class="search-results-container">
+            <div class="col-sm-3 text-center image-hover-container closet-image-container" data-ng-repeat="img in cc.imageResults track by $index">
+                <a href="/profile/edit/{{img.FileId}}">
+
+                    <div class="result-image" style="background-image:url({{img.FilePath}});"></div>
+
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>

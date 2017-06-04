@@ -1,0 +1,158 @@
+﻿@Styles.Render("~/Content/Styles/search-inspiration.min.css")
+@Styles.Render("~/Content/Styles/imageHover.css")
+
+@{
+    ViewBag.Title = "Inspiration";
+}
+
+
+@*
+    - add accessories
+    - add shoes
+    - add individual clothing option?
+    - do i want multiselect?
+    - add some end to the page, an <hr> maybe?
+*@
+
+
+<div ng-controller="inspController as ic" class="inspiration-container">
+
+    <section class="parallax-top">
+        <div class="parallax-bg"></div>
+        <div class="md-box">
+            <img src="~/Content/Images/inspiration/anna-lb-text_comic.png" class="right-anna">
+        </div>
+    </section>
+
+    <div class="content-container-level-1">
+        <div class="content-container-level-2">
+
+
+            <section class="full-content-section">
+
+                <div class="page-title"><p>Inspiration</p></div>
+                <div class="content-container-level-3">
+                    <div class="search-input-container">
+                        <form class="search-form" id="searchForm" name="ic.searchForm" role="form" ng-model="ic.newSearch" validate>
+                            <div class="input-container-level-1">
+                                <input type="text"
+                                       placeholder="Search Here!"
+                                       name="ic.searchForm"
+                                       class="image-input"
+                                       id="searchForm"
+                                       ng-model="ic.newSearch.manualInput"
+                                       validate>
+                            </div>
+
+                            <div class="input-container-level-2">
+                                <select id="colors"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.colors">
+                                    <option value="" disabled>Color</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:1}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+
+                                <select id="material"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.material">
+                                    <option value="" disabled>Material</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:2}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+
+                                <select id="tops"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.tops">
+                                    <option value="" disabled>Tops</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:3}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+
+                                <select id="bottoms"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.bottoms">
+                                    <option value="" disabled>Bottoms</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:4}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+                            </div>
+
+                            <div class="input-container-level-3">
+
+                                <select id="dresses"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.dresses">
+                                    <option value="" disabled>One Pieces</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:5}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+
+                                <select id="outerwear"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.outerwear">
+                                    <option value="" disabled>Outerwear</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:6}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+
+                                <select id="occasion"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.occasion">
+                                    <option value="" disabled>Occasion</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:7}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+
+                                <select id="season"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.season">
+                                    <option value="" disabled>Season</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:8}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+
+                                <select id="style"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.style">
+                                    <option value="" disabled>Style</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:9}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+
+                                <select id="weather"
+                                        class="image-input"
+                                        ng-model="ic.newSearch.weather">
+                                    <option value="" disabled>Weather</option>
+                                    <option ng-repeat="tag in ic.tags | filter: {TagCategoryId:14}:true track by tag.TagId" value="{{tag.TagSearchName}}">{{tag.TagDisplayName}}</option>
+                                </select>
+                            </div>
+
+                            <div class="inspiration-button-container">
+                                <button type="submit" class="search-inspiration-button" ng-click="ic.searchPins()">Style Me!</button>
+                            </div>
+                        </form>
+                        <hr style="width:95%" />
+                    </div>
+
+
+                    <div class="search-results-container container-fluid">
+                        <div class="col-sm-3 text-center image-container" data-ng-repeat="pin in ic.searchResults">
+                            <img ng-src="{{pin.image.original.url}}" class="inspiration-image center-cropped" />
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/services/backslash.closet.services.js"></script>
+<script src="~/Scripts/services/backslash.inspiration.services.js"></script>
+<script src="~/Scripts/backslash/inspiration/services.inspiration.js"></script>
+<script src="~/Scripts/backslash/inspiration/inspirationController.js"></script>
+
+
+<script type="text/ng-template" id="modalContent.html">
+
+    <div class="modal-body error-modal-image">
+        <button type="button" class="close" ng-click="mc.cancel()" style="margin-bottom:-45px"><span aria-hidden="true"><img src="/Content/Images/buttons/close-button-xonly.png" width="40" /></span></button>
+
+        <img ng-src="/Content/Images/error/{{mc.modalMsg}}" class="img-responsive" />
+    </div>
+
+</script>

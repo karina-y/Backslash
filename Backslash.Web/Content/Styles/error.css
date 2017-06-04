@@ -1,0 +1,46 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.block-parallax-1-w {
+    overflow: hidden;
+    position: relative;
+}
+
+    .block-parallax-1-w .parallax-bg-w {
+        background-attachment: fixed;
+        background-image: url('/Content/Images/parallax-bg/smack.jpg');
+        background-position: 0px 0px;
+        background-repeat: repeat;
+        opacity: .2;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+    .block-parallax-1-w .md-box-w {
+        padding: 20px 0 0px;
+        background: rgba(255, 255, 255, 0.35);
+        position: relative;
+        height: 100%;
+        text-align: center;
+    }
+
+        .block-parallax-1-w .md-box-w h1 {
+            color: black;
+        }
+
+img.error-image {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    max-width: 95%;
+    height: auto;
+}

@@ -1,0 +1,152 @@
+﻿@import "./variables.less";
+
+div.inspiration-container {
+    width: 100%;
+
+    & > .parallax-top {
+        overflow: hidden;
+        position: relative;
+
+        & > .parallax-bg {
+            background-attachment: fixed;
+            background-image: url('/Content/Images/parallax-bg/modern-girl.jpg');
+            opacity: .2;
+            background-position: 0px 0px;
+            background-repeat: repeat;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+        }
+
+        & > .md-box {
+            padding: 50px 0 0px;
+            background: transparent;
+            position: relative;
+
+            & > img.right-anna {
+                float: right;
+                padding-left: 3%;
+                width: 90%;
+
+                @media only screen and (min-width: 768px) {
+                    width: 70%;
+                }
+
+                @media only screen and (min-width: 992px) {
+                    width: 45%;
+                }
+            }
+        }
+    }
+
+    & > .content-container-level-1 {
+        width: 100%;
+
+        & > .content-container-level-2 {
+            width: 80%;
+            margin: 0 auto;
+
+            & > .full-content-section {
+                text-align: center;
+
+                & > .page-title {
+                    & > p {
+                    }
+                }
+
+                & > .content-container-level-3 {
+                    width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: none;
+
+                    @media only screen and (min-width: 480px) {
+                        width: 95%;
+                        border-right: thick solid @backslash-pink;
+                        border-left: thick solid @backslash-pink;
+                    }
+
+                    & > .search-input-container {
+                        margin-bottom: 60px;
+
+                        & > .search-form {
+                            select {
+                                padding: 9px;
+                            }
+
+                            & > .input-container-level-1 {
+                                padding-bottom: 15px;
+
+                                & > input {
+                                    width: 50%;
+                                    height: 35px;
+                                }
+                            }
+
+                            & > .input-container-level-2 {
+                                padding-bottom: 15px;
+
+                                & > select.image-input {
+                                    & > option {
+                                    }
+                                }
+                            }
+
+                            & > .input-container-level-3 {
+                                padding-bottom: 15px;
+
+                                & > select.image-input {
+                                    & > option {
+                                    }
+                                }
+                            }
+
+                            & > .inspiration-button-container {
+                                & > button {
+                                }
+                            }
+                        }
+
+                        & > hr {
+                        }
+                    }
+
+                    & > .search-results-container {
+                        width: 100%;
+                        -moz-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
+                        -o-transform: translateX(-50%);
+                        -webkit-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                        left: 50%;
+                        display: inline-block;
+                        position: relative;
+
+                        & > .image-container {
+                            & > img.center-cropped {
+                                height: 300px;
+                                margin-bottom: 40px;
+                                -webkit-clip-path: polygon(0px 0px,270px -100px,270px 300px,-40px 300px,-40px -2px);
+                                clip-path: polygon(0px 0px,270px -100px,270px 300px,-40px 300px,-40px -2px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*@media only screen and (max-width: 900px) {
+    .closet-image-container {
+        width: 50%;
+    }
+
+    .search-input-container {
+        width: 80%;
+        display: inline-block;
+    }
+}*/

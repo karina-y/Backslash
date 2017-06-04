@@ -1,0 +1,250 @@
+﻿@import "./variables.less";
+
+div.profile-home {
+    & > .parallax-top {
+        overflow: hidden;
+        position: relative;
+
+        & > .parallax-bg {
+            background-attachment: fixed;
+            background-image: url(/Content/Images/parallax-bg/chichibar.jpg);
+            opacity: .2;
+            background-position: 0px 78%;
+            background-repeat: repeat;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+        }
+
+        & > .md-box {
+            padding: 50px 0 0px;
+            background: transparent;
+            position: relative;
+            height: 100%;
+            text-align: center;
+
+            & > img.right-coco {
+                float: right;
+                padding-left: 3%;
+                width: 90%;
+
+                @media only screen and (min-width: 768px) {
+                    width: 70%;
+                }
+
+                @media only screen and (min-width: 992px) {
+                    width: 45%;
+                }
+            }
+
+            & > img.left-coco {
+                float: left;
+                padding-right: 3%;
+                width: 90%;
+
+                @media only screen and (min-width: 768px) {
+                    width: 70%;
+                }
+
+                @media only screen and (min-width: 992px) {
+                    width: 45%;
+                }
+            }
+
+
+            & > img.left-audrey {
+                float: left;
+                padding-left: 3%;
+                width: 90%;
+
+                @media only screen and (min-width: 768px) {
+                    width: 70%;
+                }
+
+                @media only screen and (min-width: 992px) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    & > .content-container-level-1 {
+        /*transform: translateX(-50%);
+        left: 50%;
+        display: inline-block;
+        position: relative;*/
+        width: 100%;
+        padding-top: 1%;
+
+        & > .content-container-level-2 {
+            width: 80%;
+            margin: 0 auto;
+
+            & > ul.nav-tabs {
+                width: 95%;
+                position: relative;
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                left: 50%;
+
+                & > li {
+                    & > a {
+                        font-weight: bold;
+                        color: @backslash-pink !important;
+                    }
+                }
+            }
+
+            & > .dynamic-content-container {
+                & > .dynamic-content-section {
+                    & > .page-title {
+                        & > p {
+                        }
+                    }
+
+                    & > .content-container-level-3 {
+                        border: none;
+                        width: 100%;
+                        margin: 0 auto;
+                        text-align: center;
+
+                        @media only screen and (min-width: 480px) {
+                            border-right: thick solid @backslash-pink;
+                            border-left: thick solid @backslash-pink;
+                        }
+
+                        & > .search-input-container {
+                            margin-bottom: 60px;
+
+                            & > .image-form {
+                                & > .input-container-level-1 {
+                                    & > input {
+                                    }
+                                }
+
+                                & > .input-contaienr-level-2 {
+                                    & > select.image-input {
+                                        & > option {
+                                        }
+                                    }
+                                }
+
+                                & > .input-contaienr-level-3 {
+                                    & > select.image-input {
+                                        & > option {
+                                        }
+                                    }
+                                }
+
+                                & > .closet-button-container {
+                                    & > button.image-upload-btn {
+                                        margin: 5px;
+                                    }
+
+                                    & > button.image-search-btn {
+                                        margin: 5px;
+                                    }
+                                }
+                            }
+
+                            & > hr {
+                            }
+                        }
+
+                        & > a {
+                            & > .image-hover-container {
+                                text-align: center;
+                            }
+                        }
+
+                        & > .search-results-container {
+                            width: 100%;
+                            margin: 0 auto;
+                            display: inline-block;
+                            position: relative;
+
+                            & > .image-hover-container {
+                                & > a {
+
+                                    & > .result-image {
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        height: 310px;
+                                        width: auto;
+                                        -webkit-clip-path: polygon(0px 0px,270px -100px,270px 300px,-40px 300px,-40px -2px);
+                                        clip-path: polygon(0px 0px,270px -100px,270px 300px,-40px 300px,-40px -2px);
+                                    }
+                                }
+                            }
+                        }
+
+                        & > button.btn-lg {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}S
+
+div.outfit-modal-header {
+    background-color: white;
+
+    button.close {
+        margin-bottom: -45px;
+    }
+}
+
+div.outfit-builder-modal-body {
+    background-color: white;
+
+    div.button-container {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    div#canvas-wrapper {
+        position: relative;
+        width: 600px;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    #outfitImagePicker {
+        visibility: hidden;
+    }
+
+    ul.image_picker_selector {
+        & > li.image-picker-icon {
+            display: inline-block;
+            float: none !important;
+        }
+    }
+}
+
+/*
+
+
+
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 900px) {
+    .closet-image-container {
+        width: 50%;
+    }
+
+    .search-input-container {
+        width: 80%;
+        display: inline-block;
+    }
+}
+    */

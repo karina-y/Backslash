@@ -1,0 +1,30 @@
+﻿[
+  {
+    "outputFile": "Content/Styles/home-index.css",
+    "inputFile": "Content/Styles/home-index.less"
+  },
+  {
+    "outputFile": "Content/Styles/home-about.css",
+    "inputFile": "Content/Styles/home-about.less"
+  },
+  {
+    "outputFile": "Content/Styles/backslash-layout.css",
+    "inputFile": "Content/Styles/backslash-layout.less"
+  },
+  {
+    "outputFile": "Content/Styles/variables.css",
+    "inputFile": "Content/Styles/variables.less"
+  },
+  {
+    "outputFile": "Content/Styles/search-inspiration.css",
+    "inputFile": "Content/Styles/search-inspiration.less"
+  },
+  {
+    "outputFile": "Content/Styles/profile-home.css",
+    "inputFile": "Content/Styles/profile-home.less"
+  },
+  {
+    "outputFile": "Content/Styles/account.css",
+    "inputFile": "Content/Styles/account.less"
+  }
+]

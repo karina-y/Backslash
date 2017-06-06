@@ -163,8 +163,6 @@
             //modalInstance.result.then(function (response) {
             //    console.log(response);
             //})
-
-            //should be able to add a result here and assign to a scope variable
         }
 
         function _resetForm() {

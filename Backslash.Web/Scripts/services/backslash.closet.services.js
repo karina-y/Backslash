@@ -52,34 +52,3 @@ backslash.closet.services.getSelectedTags = function (fileId, onSuccess, onError
                      .then(onSuccess)
                      .catch(onError);
 }
-
-/*
-backslash.closet.services.getSingleImage = function (fileId, onSuccess, onError) {
-    var url = "/files/GetFileByFileIdAndUserId/" + fileId
-    var settings = {
-        cache: false,
-        contentType: "application/x-www-form-urlencoded",
-        dataType: "json",
-        success: onSuccess,
-        error: onError,
-        type: "GET"
-    }
-    console.log("getsingleimage hit");
-    $.ajax(url, settings);
-}
-
-backslash.closet.services.addOrUpdateSingleFileData = function (imageData, onSuccess, onError) {
-    var url = "/api/files/" + fileId
-    var settings = {
-        cache: false,
-        contentType: "application/x-www-form-urlencoded",
-        data: imageData,
-        dataType: "json",
-        success: onSuccess,
-        error: onError,
-        type: "PUT"
-    }
-    $.ajax(url, settings);
-    console.log("ajax updateImage hit");
-}
-*/

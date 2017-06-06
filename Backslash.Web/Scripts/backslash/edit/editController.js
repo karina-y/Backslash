@@ -93,6 +93,7 @@
             vm.tags = JSON.parse(data.data);
         }
 
+        //find a better way to do this
         function _getSelectedTags(data) {
             vm.selectedTags = JSON.parse(data.data);
 

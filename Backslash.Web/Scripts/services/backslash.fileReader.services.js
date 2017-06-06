@@ -9,11 +9,6 @@ backslash.fileReader.services.onLoad = function (reader, deferred, baseService) 
         baseService.$timeout(function () {
             deferred.resolve(reader.result);
         });
-
-
-        //scope.$apply(function () {
-        //    deferred.resolve(reader.result);
-        //});
     };
 };
 
@@ -24,10 +19,6 @@ backslash.fileReader.services.onError = function (reader, deferred, baseService)
         baseService.$timeout(function () {
             deferred.reject(reader.result);
         });
-
-        //scope.$apply(function () {
-        //    deferred.reject(reader.result);
-        //});
     };
 };
 

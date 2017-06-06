@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    //  we add baseController as a service factory (even though it will be extended by controllers, not services) so it can be injected
+    //we add baseController as a service factory (even though it will be extended by controllers, not services) so it can be injected
     angular.module(APPNAME)
     .factory('$baseController', BaseController);
 

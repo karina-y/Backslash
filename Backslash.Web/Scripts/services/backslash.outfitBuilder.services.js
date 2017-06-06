@@ -42,23 +42,23 @@ backslash.outfitBuilder.services.addImage = function (imageUrl, minScale, maxSca
         .setCoords();
 
         vm.canvas.add(image);
-    }, {
-        crossOrigin: 'Anonymous'
-    });
+    },
+    { crossOrigin: 'Anonymous' }    //works intermittently, find out why
+    );
 };
 
 backslash.outfitBuilder.services.getActiveStyle = function (styleName, object) {
     console.log("getactivestyle");
+
     object = object || vm.canvas.getActiveObject();
     if (!object) return '';
 
-    return (object.getSelectionStyles && object.isEditing)
-      ? (object.getSelectionStyles()[styleName] || '')
-      : (object[styleName] || '');
+    return (object.getSelectionStyles && object.isEditing) ? (object.getSelectionStyles()[styleName] || '') : (object[styleName] || '');
 };
 
 backslash.outfitBuilder.services.setActiveStyle = function (styleName, value, object) {
     console.log("setactivestyle");
+
     object = object || vm.canvas.getActiveObject();
     if (!object) return;
 
@@ -78,42 +78,45 @@ backslash.outfitBuilder.services.setActiveStyle = function (styleName, value, ob
 
 backslash.outfitBuilder.services.getActiveProp = function (name) {
     console.log("getactiveprop");
+
     var object = vm.canvas.getActiveObject();
-    if (!object) return '';
+    if (!object)
+        return '';
 
     return object[name] || '';
 }
 
 backslash.outfitBuilder.services.setActiveProp = function (name, value) {
     console.log("setActiveProp");
+
     var object = vm.canvas.getActiveObject();
-    if (!object) return;
+    if (!object)
+        return;
     object.set(name, value).setCoords();
     vm.canvas.renderAll();
 }
 
 backslash.outfitBuilder.services.confirmClear = function () {
-    if (confirm('Are you sure?')) {
+    if (confirm('Are you sure?'))
         vm.canvas.clear();
-    }
 };
 
 backslash.outfitBuilder.services.rasterize = function () {
-    if (!fabric.Canvas.supports('toDataURL')) {
+    if (!fabric.Canvas.supports('toDataURL'))
         alert('This browser doesn\'t provide means to serialize canvas to an image');
-    }
-    else {
+
+    else
         window.open(vm.canvas.toDataURL('png'));
-    }
+
 };
 
 backslash.outfitBuilder.services.exportRasterizedCanvas = function () {
-    if (!fabric.Canvas.supports('toDataURL')) {
+    if (!fabric.Canvas.supports('toDataURL'))
         alert('This browser doesn\'t provide means to serialize canvas to an image');
-    }
-    else {
+
+    else
         return vm.canvas.toDataURL('png');
-    }
+
 };
 
 backslash.outfitBuilder.services.getSelected = function () {
@@ -171,9 +174,9 @@ backslash.outfitBuilder.services.initCustomization = function () {
         Cufon.fonts.delicious.offsetTop = 25;
     }
 
-    if (/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
+    if (/(iPhone|iPod|iPad)/i.test(navigator.userAgent))
         fabric.Object.prototype.cornerSize = 30;
-    }
+
 
     fabric.Object.prototype.transparentCorners = false;
 

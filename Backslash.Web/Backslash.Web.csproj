@@ -1053,7 +1053,6 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\pages\Navbar.html" />
     <Content Include="Scripts\backslash\edit\editController.js" />
-    <Content Include="Scripts\backslash\closet\home.js" />
     <Content Include="Scripts\backslash\inspiration\inspirationController.js" />
     <Content Include="Scripts\backslash\closet\Closet.html" />
     <Content Include="Scripts\backslash\outfits\Outfits.html" />

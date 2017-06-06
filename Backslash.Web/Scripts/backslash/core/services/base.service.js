@@ -27,7 +27,7 @@
                 self.scope = $s;
 
                 return function (fx) {
-                    self.scope.$apply(fx);//this is the magic right here that cause ng to re-evaluate bindings
+                    self.scope.$apply(fx); //this is the magic right here that cause ng to re-evaluate bindings
                 }
             }
 

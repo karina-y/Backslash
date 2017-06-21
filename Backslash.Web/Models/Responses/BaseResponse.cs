@@ -1,16 +1,17 @@
-﻿using System;
+﻿//DEPRECATED
+//using System;
 
-namespace Backslash.Web.Models.Responses
-{
-    public abstract class BaseResponse
-    {
-        public bool IsSuccessFul { get; set; }
+//namespace Backslash.Web.Models.Responses
+//{
+//    public abstract class BaseResponse
+//    {
+//        public bool IsSuccessFul { get; set; }
 
-        public string TransactionId { get; set; }
+//        public string TransactionId { get; set; }
 
-        public BaseResponse()
-        {
-            this.TransactionId = Guid.NewGuid().ToString();
-        }
-    }
-}
+//        public BaseResponse()
+//        {
+//            this.TransactionId = Guid.NewGuid().ToString();
+//        }
+//    }
+//}

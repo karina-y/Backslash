@@ -75,11 +75,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Errors\ErrorCodes.cs" />
     <Compile Include="Models\FileTag.cs" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Requests\FileAddRequest.cs" />
+    <Compile Include="Models\Requests\FileUpdateRequest.cs" />
+    <Compile Include="Models\Requests\MessagingAddRequest.cs" />
+    <Compile Include="Models\Responses\BaseResponse.cs" />
+    <Compile Include="Models\Responses\ErrorResponse.cs" />
+    <Compile Include="Models\Responses\ItemResponse.cs" />
+    <Compile Include="Models\Responses\ItemsResponse.cs" />
+    <Compile Include="Models\Responses\SuccessResponse.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\TagCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

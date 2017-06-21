@@ -1,5 +1,6 @@
 ﻿using Backslash.Data.Entities;
 using Backslash.Data.Repositories;
+using Backslash.Service.Interfaces;
 using Backslash.Web.Models.ViewModels;
 using System.Web.Mvc;
 
@@ -8,12 +9,16 @@ namespace Backslash.Web.Controllers
     [Authorize]
     public class ProfileController : BaseController
     {
-        private FileRepository _fileRepository;
+        #region Fields
+        private IFileService _fileService;
+        #endregion
 
-        public ProfileController()
+        #region Constructor
+        public ProfileController(IFileService fileService)
         {
-            _fileRepository = new FileRepository();
+            _fileService = fileService;
         }
+        #endregion
 
         public ActionResult Uploader()
         {
@@ -30,7 +35,7 @@ namespace Backslash.Web.Controllers
         {
             ProfileEditViewModel model = new ProfileEditViewModel();
 
-            model.file = _fileRepository.GetFileByFileIdAndUserId(id, GetUserID());
+            model.file = _fileService.GetFileByFileIdAndUserId(id, GetUserID());
 
             //var fileTags = model.file.FileTags;
 

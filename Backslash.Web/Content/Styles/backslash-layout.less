@@ -309,7 +309,7 @@ body {
 
                 & > .modal-header.image-modal-header {
                     border: none !important;
-                    padding: 16px 15px 47px 0 !important;
+                    //padding: 16px 15px 47px 0 !important;
                     background-color: white;
                 }
 
@@ -330,6 +330,27 @@ body {
             }
         }
     }
+}
+
+::selection {
+    background: @backslash-pink-light;
+}
+
+
+//change color of select box outline
+select:active, select:hover, select:focus {
+  outline-color: @backslash-pink-light;
+}
+
+//change color of select box options on hover
+/*option:active, option:hover, option:focus, option:visited, option::selection {
+  background: @backslash-pink-light;
+  background-color: @backslash-pink-light;
+  color:white;
+}*/
+
+button:active, button:focus, button:visited {
+    outline-color: @backslash-pink-light;
 }
 
 

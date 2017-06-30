@@ -245,7 +245,7 @@
     <Compile Include="Controllers\ApiControllers\MessagingApiController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RefucktoringController.cs" />
     <Compile Include="Controllers\SearchController.cs" />

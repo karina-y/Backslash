@@ -256,7 +256,6 @@ body .modal .modal-dialog > .modal-content {
 }
 body .modal .modal-dialog > .modal-content > .modal-header.image-modal-header {
   border: none !important;
-  padding: 16px 15px 47px 0 !important;
   background-color: white;
 }
 body .modal .modal-dialog > .modal-content > .modal-body {
@@ -271,6 +270,24 @@ body .modal .modal-dialog > .modal-content > .modal-body {
 }
 body .modal .modal-dialog > .modal-content > .image-modal-body {
   background-color: white;
+}
+::selection {
+  background: #F6BEBE;
+}
+select:active,
+select:hover,
+select:focus {
+  outline-color: #F6BEBE;
+}
+/*option:active, option:hover, option:focus, option:visited, option::selection {
+  background: @backslash-pink-light;
+  background-color: @backslash-pink-light;
+  color:white;
+}*/
+button:active,
+button:focus,
+button:visited {
+  outline-color: #F6BEBE;
 }
 /*bootstrap overrides*/
 @media (min-width: 785px) {

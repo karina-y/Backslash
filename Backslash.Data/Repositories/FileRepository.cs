@@ -65,7 +65,7 @@ namespace Backslash.Data.Repositories
             model.FilePath = "https://backslash.s3-us-west-2.amazonaws.com/" + model.FileDirectory + "/" + fileName.Replace(" ", "%20");
             model.UserId = userId;
 
-            using (var _dc = new DataContext())
+            using (DataContext _dc = new DataContext())
             {
                 bool result = false;
 
@@ -144,7 +144,7 @@ namespace Backslash.Data.Repositories
         {
             bool result = false;
 
-            using (var _dc = new DataContext())
+            using (DataContext _dc = new DataContext())
             {
                 var entity = _dc.Files.FirstOrDefault(x => x.FileId == file.FileId && x.UserId == userId);
 

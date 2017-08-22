@@ -14,5 +14,7 @@ namespace Backslash.Data
         public DbSet<FileTag> FileTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<TagCategory> TagCategories { get; set; }
+        public DbSet<SecurityAccount> SecurityAccounts { get; set; }
+        public DbSet<SecurityAccountAuthentication> SecurityAccountAuthentications { get; set; }
     }
 }

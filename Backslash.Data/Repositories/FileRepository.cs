@@ -146,7 +146,7 @@ namespace Backslash.Data.Repositories
 
             using (DataContext _dc = new DataContext())
             {
-                var entity = _dc.Files.FirstOrDefault(x => x.FileId == file.FileId && x.UserId == userId);
+                File entity = _dc.Files.FirstOrDefault(x => x.FileId == file.FileId && x.UserId == userId);
 
                 if (entity != null)
                 {

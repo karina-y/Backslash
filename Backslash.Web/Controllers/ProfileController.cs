@@ -1,6 +1,4 @@
-﻿using Backslash.Data.Entities;
-using Backslash.Data.Repositories;
-using Backslash.Service.Interfaces;
+﻿using Backslash.Service.Interfaces;
 using Backslash.Web.Models.ViewModels;
 using System.Web.Mvc;
 

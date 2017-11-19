@@ -29,7 +29,7 @@ body .modal-xl .modal-body {
   max-width: 100% !important;
 }
 body > .rendered-body {
-  margin-top: 60px;
+  margin-top: 55px;
   position: inherit;
 }
 body nav.navbar > .container-fluid img.navbar-button {
@@ -52,7 +52,7 @@ body nav.navbar > .container-fluid > .navbar-header > button.navbar-toggle {
 }
 body nav.navbar > .container-fluid > .navbar-header > a > img.backslash-logo {
   max-height: 45px;
-  margin: 10px 5px;
+  margin: 7px 5px;
 }
 @media screen and (max-width: 820px) {
   body nav.navbar > .container-fluid > .navbar-header > a > img.backslash-logo {
@@ -60,7 +60,7 @@ body nav.navbar > .container-fluid > .navbar-header > a > img.backslash-logo {
   }
 }
 body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslash-navbar > li {
-  padding: 10px;
+  padding: 7px 10px;
 }
 body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslash-navbar > li > .dropdown {
   position: relative;
@@ -89,8 +89,7 @@ body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslas
   padding: 0;
 }
 body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslash-navbar > li > a > .button-icon-container {
-  height: 45px;
-  width: 120px;
+  height: 42px;
   overflow: hidden;
 }
 body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslash-navbar > li > a > .button-icon-container > img {
@@ -106,17 +105,18 @@ body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslas
   transition: transform 0.3s ease-in-out;
 }
 body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslash-navbar > li > a > .button-icon-container > img:hover {
-  -moz-transform: translate3d(0px, -50px, 0px);
-  -ms-transform: translate3d(0px, -50px, 0px);
-  -o-transform: translate3d(0px, -50px, 0px);
-  -webkit-transform: translate3d(0px, -50px, 0px);
-  transform: translate3d(0px, -50px, 0px);
+  -moz-transform: translate3d(0px, -42px, 0px);
+  -ms-transform: translate3d(0px, -42px, 0px);
+  -o-transform: translate3d(0px, -42px, 0px);
+  -webkit-transform: translate3d(0px, -42px, 0px);
+  transform: translate3d(0px, -42px, 0px);
 }
 body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslash-navbar > li.active > a {
   background-color: transparent;
   padding: 0;
 }
 body footer > .social-links {
+  margin-top: 15px;
   text-align: center;
 }
 body footer > .social-links > a {

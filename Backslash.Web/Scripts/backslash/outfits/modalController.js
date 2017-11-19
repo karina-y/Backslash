@@ -107,9 +107,10 @@
             $outfitBuilderService.bringForward();
         }
 
-        function _readFile() {
+        function _readFile(file) {
             //$scope.progress = 0;
-            var file = document.getElementById("tempFile").files[0];
+            //var file = document.getElementById("tempFile").files[0];
+            file = file.files[0];
 
             vm.outfitName = file.name;
 

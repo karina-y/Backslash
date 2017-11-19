@@ -46,7 +46,7 @@
             //    $(vm.canvasImg.src).width(vm.canvasImg.width);
             //}
 
-
+            file = file.files[0];
 
             vm.fileName = file.name;
 

@@ -300,3 +300,7 @@ ModelManifest.xml
 /Backslash.Web/Views/Refucktoring
 /Backslash.Web/Views/Shared
 /Backslash.Web/Views
+/Backslash.Web/Authentication
+/Backslash.Web/Controllers/ApiControllers/TagController.cs
+/Backslash.Web/Controllers/ApiControllers/SecurityController.cs
+/Backslash.Web/Controllers/ApiControllers/FileController.cs

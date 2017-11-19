@@ -34,10 +34,12 @@
         vm.croppedImage = null;
 
 
-        function _readFile() {
+        function _readFile(file) {
+            //console.log("hit"); 
+
             vm.resetCanvas();
             //$scope.progress = 0;
-            var file = document.getElementById("tempFile").files[0];
+            //var file = document.getElementById("tempFile").files[0];
 
             //if (vm.canvasImg.width > (screen.width * .8)) {
             //    vm.canvasImg.width = screen.width * .8;

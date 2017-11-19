@@ -12,6 +12,9 @@ namespace Backslash.Web.App_Start
     using Ninject.Web.Common;
     using Service.Interfaces;
     using Service.Services;
+    using System.Web.Http;
+    using Ninject.Web.Common.WebHost;
+
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -47,6 +50,11 @@ namespace Backslash.Web.App_Start
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                 RegisterServices(kernel);
+
+                // register the dependency resolver passing the kernel container
+                //allows me to perform controller injections
+                GlobalConfiguration.Configuration.DependencyResolver = new Ninject.Web.WebApi.NinjectDependencyResolver(kernel);
+
                 return kernel;
             }
             catch

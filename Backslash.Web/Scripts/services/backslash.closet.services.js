@@ -15,7 +15,7 @@ backslash.closet.services.search = function (directory, tags, onSuccess, onError
 }
 
 backslash.closet.services.addFile = function (fileData, directory, onSuccess, onError) {
-    var url = "/api/files/AddFile/" + directory
+    var url = "/api/file/internal/" + directory
     var settings = {
         cache: false
         , contentType: false

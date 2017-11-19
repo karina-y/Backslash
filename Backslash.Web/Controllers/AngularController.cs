@@ -1,5 +1,6 @@
 ﻿using Backslash.Data.Entities;
 using Backslash.Service.Interfaces;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 
@@ -29,40 +30,40 @@ namespace Backslash.Web.Controllers
 
         public JsonResult GetAllTags()
         {
-            var results = new JavaScriptSerializer().Serialize(_fileService.GetAllTags());
+            string results = new JavaScriptSerializer().Serialize(_fileService.GetAllTags());
 
             return Json(results, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult GetFilesByUserId(string id)
         {
-            var results = new JavaScriptSerializer().Serialize(_fileService.GetFilesByUserId(id, GetUserID()));
+            string results = new JavaScriptSerializer().Serialize(_fileService.GetFilesByUserId(id, GetUserID()));
             return Json(results, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult GetSelectedTags(int id)
         {
-            var file = _fileService.GetFileByFileIdAndUserId(id, GetUserID());
+            File file = _fileService.GetFileByFileIdAndUserId(id, GetUserID());
 
-            var fileTags = file.FileTags;
+            List<FileTag> fileTags = file.FileTags;
 
-            var tags = new int[fileTags.Count];
+            int[] tags = new int[fileTags.Count];
 
             if (fileTags.Count > 0)
             {
-                for (var i = 0; i < fileTags.Count; i++)
+                for (int i = 0; i < fileTags.Count; i++)
                 {
                     tags[i] = fileTags[i].TagId;
                 }
             }
 
-            var results = new JavaScriptSerializer().Serialize(fileTags);
+            string results = new JavaScriptSerializer().Serialize(fileTags);
             return Json(results, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult UpdateFile(File file)
         {
-            var results = new JavaScriptSerializer().Serialize(_fileService.UpdateFile(file, GetUserID()));
+            string results = new JavaScriptSerializer().Serialize(_fileService.UpdateFile(file, GetUserID()));
 
             return Json(results, JsonRequestBehavior.AllowGet);
         }
@@ -70,7 +71,7 @@ namespace Backslash.Web.Controllers
         [HttpPost]
         public JsonResult GetFileByTags(File file)
         {
-            var results = new JavaScriptSerializer().Serialize(_fileService.GetFileByTags(file.FileTags, file.FileDirectory, GetUserID()));
+            string results = new JavaScriptSerializer().Serialize(_fileService.GetFileByTags(file.FileTags, file.FileDirectory, GetUserID()));
 
             return Json(results, JsonRequestBehavior.AllowGet);
         }
@@ -78,7 +79,7 @@ namespace Backslash.Web.Controllers
         [HttpDelete]
         public JsonResult DeleteFileById(int id)
         {
-            var results = new JavaScriptSerializer().Serialize(_fileService.DeleteFileByFileId(id, GetUserID()));
+            string results = new JavaScriptSerializer().Serialize(_fileService.DeleteFileByFileId(id, GetUserID()));
 
             return Json(results, JsonRequestBehavior.AllowGet);
         }

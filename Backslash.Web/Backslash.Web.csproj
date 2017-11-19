@@ -1037,7 +1037,6 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="Content\Styles\home-about.less" />
-    <Content Include="Content\Styles\backslash-layout.less" />
     <Content Include="Content\Styles\variables.less" />
     <Content Include="Content\Styles\search-inspiration.less" />
     <Content Include="Content\Styles\profile-home.less" />
@@ -1049,6 +1048,7 @@
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Content\Fonts\badaboom.TTF" />
     <Content Include="Content\Styles\account.less" />
+    <Content Include="Content\Styles\backslash-layout.less" />
     <None Include="Properties\PublishProfiles\backslash - gearhost.pubxml" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\fabricJsComponents\fabric.js" />

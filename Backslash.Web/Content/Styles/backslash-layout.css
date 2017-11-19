@@ -29,8 +29,14 @@ body .modal-xl .modal-body {
   max-width: 100% !important;
 }
 body > .rendered-body {
-  margin-top: 70px;
+  margin-top: 60px;
   position: inherit;
+}
+body nav.navbar > .container-fluid img.navbar-button {
+  width: 100px;
+}
+body nav.navbar > .container-fluid .navbar-nav {
+  margin: 0;
 }
 @media screen and (max-width: 415px) {
   body nav.navbar > .container-fluid > .navbar-header {
@@ -39,25 +45,18 @@ body > .rendered-body {
 }
 body nav.navbar > .container-fluid > .navbar-header > button.navbar-toggle {
   background-color: #EC7C7D;
-  margin-bottom: 0;
-  margin-top: 10px;
-  right: -15px;
+  margin: 9px 5px !important;
+  padding: 2px 12px;
+  right: 0;
+  position: absolute;
 }
 body nav.navbar > .container-fluid > .navbar-header > a > img.backslash-logo {
-  max-height: 40px;
-  margin: 19px 7px 0 5px;
+  max-height: 45px;
+  margin: 10px 5px;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 820px) {
   body nav.navbar > .container-fluid > .navbar-header > a > img.backslash-logo {
     max-height: 40px;
-    margin-top: 15px;
-    margin-right: 0;
-  }
-}
-@media only screen and (min-width: 992px) {
-  body nav.navbar > .container-fluid > .navbar-header > a > img.backslash-logo {
-    max-height: 60px;
-    margin-top: 6px;
   }
 }
 body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslash-navbar > li {
@@ -90,11 +89,12 @@ body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslas
   padding: 0;
 }
 body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslash-navbar > li > a > .button-icon-container {
-  height: 50px;
+  height: 45px;
   width: 120px;
   overflow: hidden;
 }
 body nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-right.backslash-navbar > li > a > .button-icon-container > img {
+  width: 100px;
   -moz-transform: translate3d(0px, 0px, 0px);
   -ms-transform: translate3d(0px, 0px, 0px);
   -o-transform: translate3d(0px, 0px, 0px);
